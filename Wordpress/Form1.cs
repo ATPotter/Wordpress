@@ -97,6 +97,58 @@ namespace Wordpress
             // We've built the message, now send it to Wordpress
             try
             {
+                rtResponse.Clear();
+
+                var response = request.GetResponse();
+                var responseStream = response.GetResponseStream();
+                var reader = new StreamReader(responseStream);
+                var responseFromServer = reader.ReadToEnd();   // HttpUtility.UrlDecode(reader.ReadToEnd());
+
+                // That gives us a message, which we can subsequently decode
+                rtResponse.Text = responseFromServer;
+            }
+            catch (WebException ex)
+            {
+                using (WebResponse webResponse = ex.Response)
+                {
+                    using (var data = webResponse.GetResponseStream())
+                    {
+                        if (null != data)
+                        {
+                            using (var reader = new StreamReader(data))
+                            {
+                                rtResponse.Text = reader.ReadToEnd();
+                            }
+                        }
+                    }
+                }
+            }
+
+            rtResponse.AppendText("Finished\r\n");
+        }
+
+        private void btnPost_Click(object sender, EventArgs e)
+        {
+            string requestData = "{\"content\": \"This is a test\"}";
+
+            // Build the HTTP Request
+            var request = WebRequest.Create("https://public-api.wordpress.com/rest/v1/sites/76977328/posts/new") as HttpWebRequest;
+            request.Method = "POST";
+            request.Accept = "application/json";
+            request.Headers["Authorization"] = "Bearer Q8KsA(vEvmDs&ZCO(HI%C0i@KYh%qiXSNtbBpl0hoAFIQwXIXfXkSrVxFaKD86v5";
+
+
+            byte[] byteArray = Encoding.UTF8.GetBytes(requestData);
+            request.ContentType = "application/json";
+            request.ContentLength = byteArray.Length;
+            Stream dataStream = request.GetRequestStream();
+            dataStream.Write(byteArray, 0, byteArray.Length);
+            dataStream.Flush();
+            dataStream.Close();
+
+            // We've built the message, now send it to Wordpress
+            try
+            {
                 var response = request.GetResponse();
                 var responseStream = response.GetResponseStream();
                 var reader = new StreamReader(responseStream);
@@ -121,6 +173,7 @@ namespace Wordpress
                     }
                 }
             }
+
         }
     }
 }
