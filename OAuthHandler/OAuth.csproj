@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CE51B36B-28FC-4DA1-B481-FCFEB6791BF4}</ProjectGuid>
+    <ProjectGuid>{C6D1C57A-C3B2-4231-8912-657AC3DF9A8B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WordpressDto</RootNamespace>
-    <AssemblyName>WordpressDto</AssemblyName>
+    <RootNamespace>OAuthHandler</RootNamespace>
+    <AssemblyName>OAuthHandler</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -44,19 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attachment.Dto.cs" />
-    <Compile Include="Attachments.Dto.cs" />
-    <Compile Include="Author.Dto.cs" />
-    <Compile Include="Links.Dto.cs" />
-    <Compile Include="Meta.Dto.cs" />
-    <Compile Include="MetadataRow.Dto.cs" />
-    <Compile Include="Post.Dto.cs" />
-    <Compile Include="Posts.Dto.cs" />
-    <Compile Include="Posts.Query.Dto.cs" />
+    <Compile Include="OAuthHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Dto.cs" />
-    <Compile Include="User.Dto.cs" />
-    <Compile Include="Users.Dto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

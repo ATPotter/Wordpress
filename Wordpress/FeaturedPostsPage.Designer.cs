@@ -34,6 +34,8 @@
             this.chPost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chFeatured = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chHeading = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chProposedFI = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblNumEntries = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -52,9 +54,9 @@
             // 
             this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(113, 507);
+            this.progressBar.Location = new System.Drawing.Point(94, 508);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(820, 23);
+            this.progressBar.Size = new System.Drawing.Size(839, 23);
             this.progressBar.TabIndex = 2;
             // 
             // lvDisplay
@@ -65,7 +67,9 @@
             this.lvDisplay.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chPost,
             this.chFeatured,
-            this.chHeading});
+            this.chHeading,
+            this.chProposedFI,
+            this.chStatus});
             this.lvDisplay.GridLines = true;
             this.lvDisplay.Location = new System.Drawing.Point(13, 14);
             this.lvDisplay.Name = "lvDisplay";
@@ -81,14 +85,27 @@
             // chFeatured
             // 
             this.chFeatured.Text = "Featured Img";
-            this.chFeatured.Width = 85;
+            this.chFeatured.Width = 200;
             // 
             // chHeading
             // 
             this.chHeading.Text = "Heading";
+            this.chHeading.Width = 150;
+            // 
+            // chProposedFI
+            // 
+            this.chProposedFI.Text = "Proposed Featured";
+            this.chProposedFI.Width = 200;
+            // 
+            // chStatus
+            // 
+            this.chStatus.Text = "Status";
+            this.chStatus.Width = 25;
             // 
             // lblNumEntries
             // 
+            this.lblNumEntries.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNumEntries.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblNumEntries.Location = new System.Drawing.Point(939, 507);
             this.lblNumEntries.Name = "lblNumEntries";
             this.lblNumEntries.Size = new System.Drawing.Size(84, 23);
@@ -118,5 +135,7 @@
         private System.Windows.Forms.ColumnHeader chFeatured;
         private System.Windows.Forms.ColumnHeader chHeading;
         private System.Windows.Forms.Label lblNumEntries;
+        private System.Windows.Forms.ColumnHeader chProposedFI;
+        private System.Windows.Forms.ColumnHeader chStatus;
     }
 }

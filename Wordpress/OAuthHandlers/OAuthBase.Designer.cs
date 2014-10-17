@@ -1,13 +1,13 @@
 ﻿namespace Wordpress
 {
-    partial class Form1
+    partial class OAuthBase
     {
-        /// <summary>
+        /// <summary> 
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
+        /// <summary> 
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -20,17 +20,14 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        protected virtual void InitializeComponent()
         {
-            this.btnGet = new System.Windows.Forms.Button();
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.tpOauth = new System.Windows.Forms.TabPage();
             this.btnPost = new System.Windows.Forms.Button();
             this.rtResponse = new System.Windows.Forms.RichTextBox();
             this.btnCompleteAuth = new System.Windows.Forms.Button();
@@ -48,117 +45,64 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tpFeatured = new System.Windows.Forms.TabPage();
-            this.tpFlickrOAuth = new System.Windows.Forms.TabPage();
-            this.featuredPostsPage1 = new Wordpress.FeaturedPostsPage();
-            this.flickrOauth21 = new Wordpress.OAuthHandlers.FlickrOauth2();
-            this.tabControl.SuspendLayout();
-            this.tpOauth.SuspendLayout();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.tpFeatured.SuspendLayout();
-            this.tpFlickrOAuth.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnGet
-            // 
-            this.btnGet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGet.Location = new System.Drawing.Point(13, 614);
-            this.btnGet.Name = "btnGet";
-            this.btnGet.Size = new System.Drawing.Size(75, 23);
-            this.btnGet.TabIndex = 0;
-            this.btnGet.Text = "button1";
-            this.btnGet.UseVisualStyleBackColor = true;
-            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
-            // 
-            // tabControl
-            // 
-            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl.Controls.Add(this.tpOauth);
-            this.tabControl.Controls.Add(this.tpFeatured);
-            this.tabControl.Controls.Add(this.tpFlickrOAuth);
-            this.tabControl.Location = new System.Drawing.Point(13, 13);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(872, 595);
-            this.tabControl.TabIndex = 1;
-            // 
-            // tpOauth
-            // 
-            this.tpOauth.Controls.Add(this.btnPost);
-            this.tpOauth.Controls.Add(this.rtResponse);
-            this.tpOauth.Controls.Add(this.btnCompleteAuth);
-            this.tpOauth.Controls.Add(this.btnDone);
-            this.tpOauth.Controls.Add(this.browser1);
-            this.tpOauth.Controls.Add(this.btnAuthorize);
-            this.tpOauth.Controls.Add(this.groupBox1);
-            this.tpOauth.Location = new System.Drawing.Point(4, 22);
-            this.tpOauth.Name = "tpOauth";
-            this.tpOauth.Padding = new System.Windows.Forms.Padding(3);
-            this.tpOauth.Size = new System.Drawing.Size(864, 569);
-            this.tpOauth.TabIndex = 0;
-            this.tpOauth.Text = "WP Oauth";
-            this.tpOauth.UseVisualStyleBackColor = true;
             // 
             // btnPost
             // 
-            this.btnPost.Location = new System.Drawing.Point(578, 113);
+            this.btnPost.Location = new System.Drawing.Point(574, 151);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(75, 23);
-            this.btnPost.TabIndex = 6;
+            this.btnPost.TabIndex = 13;
             this.btnPost.Text = "Post";
             this.btnPost.UseVisualStyleBackColor = true;
-            this.btnPost.Click += new System.EventHandler(this.btnPost_Click);
             // 
             // rtResponse
             // 
-            this.rtResponse.Location = new System.Drawing.Point(578, 148);
+            this.rtResponse.Location = new System.Drawing.Point(574, 186);
             this.rtResponse.Name = "rtResponse";
             this.rtResponse.ReadOnly = true;
             this.rtResponse.Size = new System.Drawing.Size(267, 402);
-            this.rtResponse.TabIndex = 5;
+            this.rtResponse.TabIndex = 12;
             this.rtResponse.Text = "";
             // 
             // btnCompleteAuth
             // 
-            this.btnCompleteAuth.Location = new System.Drawing.Point(578, 83);
+            this.btnCompleteAuth.Location = new System.Drawing.Point(574, 121);
             this.btnCompleteAuth.Name = "btnCompleteAuth";
             this.btnCompleteAuth.Size = new System.Drawing.Size(75, 23);
-            this.btnCompleteAuth.TabIndex = 4;
+            this.btnCompleteAuth.TabIndex = 11;
             this.btnCompleteAuth.Text = "Complete";
             this.btnCompleteAuth.UseVisualStyleBackColor = true;
-            this.btnCompleteAuth.Click += new System.EventHandler(this.btnCompleteAuth_Click);
             // 
             // btnDone
             // 
             this.btnDone.Enabled = false;
-            this.btnDone.Location = new System.Drawing.Point(578, 50);
+            this.btnDone.Location = new System.Drawing.Point(574, 88);
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(75, 23);
-            this.btnDone.TabIndex = 3;
+            this.btnDone.TabIndex = 10;
             this.btnDone.Text = "Got It";
             this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // browser1
             // 
-            this.browser1.Location = new System.Drawing.Point(7, 148);
+            this.browser1.Location = new System.Drawing.Point(3, 186);
             this.browser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser1.Name = "browser1";
             this.browser1.ScriptErrorsSuppressed = true;
             this.browser1.Size = new System.Drawing.Size(545, 415);
-            this.browser1.TabIndex = 2;
+            this.browser1.TabIndex = 9;
             // 
             // btnAuthorize
             // 
-            this.btnAuthorize.Location = new System.Drawing.Point(578, 17);
+            this.btnAuthorize.Location = new System.Drawing.Point(574, 55);
             this.btnAuthorize.Name = "btnAuthorize";
             this.btnAuthorize.Size = new System.Drawing.Size(75, 23);
-            this.btnAuthorize.TabIndex = 1;
+            this.btnAuthorize.TabIndex = 8;
             this.btnAuthorize.Text = "Authorize";
             this.btnAuthorize.UseVisualStyleBackColor = true;
-            this.btnAuthorize.Click += new System.EventHandler(this.btnAuthorize_Click);
             // 
             // groupBox1
             // 
@@ -172,10 +116,10 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(7, 7);
+            this.groupBox1.Location = new System.Drawing.Point(3, 45);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(545, 134);
-            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "App Info";
             // 
@@ -283,90 +227,55 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Client Name";
             // 
-            // tpFeatured
+            // lblTitle
             // 
-            this.tpFeatured.Controls.Add(this.featuredPostsPage1);
-            this.tpFeatured.Location = new System.Drawing.Point(4, 22);
-            this.tpFeatured.Name = "tpFeatured";
-            this.tpFeatured.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFeatured.Size = new System.Drawing.Size(864, 569);
-            this.tpFeatured.TabIndex = 1;
-            this.tpFeatured.Text = "WP Featured";
-            this.tpFeatured.UseVisualStyleBackColor = true;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Location = new System.Drawing.Point(3, 16);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(37, 13);
+            this.lblTitle.TabIndex = 14;
+            this.lblTitle.Text = "OAuth";
             // 
-            // tpFlickrOAuth
-            // 
-            this.tpFlickrOAuth.Controls.Add(this.flickrOauth21);
-            this.tpFlickrOAuth.Location = new System.Drawing.Point(4, 22);
-            this.tpFlickrOAuth.Name = "tpFlickrOAuth";
-            this.tpFlickrOAuth.Size = new System.Drawing.Size(864, 569);
-            this.tpFlickrOAuth.TabIndex = 2;
-            this.tpFlickrOAuth.Text = "Flickr OAuth";
-            this.tpFlickrOAuth.UseVisualStyleBackColor = true;
-            // 
-            // featuredPostsPage1
-            // 
-            this.featuredPostsPage1.Authorization = "Q8KsA(vEvmDs&ZCO(HI%C0i@KYh%qiXSNtbBpl0hoAFIQwXIXfXkSrVxFaKD86v5";
-            this.featuredPostsPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.featuredPostsPage1.Location = new System.Drawing.Point(3, 3);
-            this.featuredPostsPage1.Name = "featuredPostsPage1";
-            this.featuredPostsPage1.Size = new System.Drawing.Size(858, 563);
-            this.featuredPostsPage1.TabIndex = 0;
-            this.featuredPostsPage1.WpSite = null;
-            // 
-            // flickrOauth21
-            // 
-            this.flickrOauth21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flickrOauth21.Location = new System.Drawing.Point(0, 0);
-            this.flickrOauth21.Name = "flickrOauth21";
-            this.flickrOauth21.Size = new System.Drawing.Size(864, 569);
-            this.flickrOauth21.TabIndex = 0;
-            // 
-            // Form1
+            // OAuthBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 649);
-            this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.btnGet);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.tabControl.ResumeLayout(false);
-            this.tpOauth.ResumeLayout(false);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.btnPost);
+            this.Controls.Add(this.rtResponse);
+            this.Controls.Add(this.btnCompleteAuth);
+            this.Controls.Add(this.btnDone);
+            this.Controls.Add(this.browser1);
+            this.Controls.Add(this.btnAuthorize);
+            this.Controls.Add(this.groupBox1);
+            this.Name = "OAuthBase";
+            this.Size = new System.Drawing.Size(853, 605);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tpFeatured.ResumeLayout(false);
-            this.tpFlickrOAuth.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnGet;
-        private System.Windows.Forms.TabControl tabControl;
-        private System.Windows.Forms.TabPage tpOauth;
-        private System.Windows.Forms.TabPage tpFeatured;
-        private System.Windows.Forms.WebBrowser browser1;
-        private System.Windows.Forms.Button btnAuthorize;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox tbCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox tbRedirectUri;
-        private System.Windows.Forms.TextBox tbClientSecret;
-        private System.Windows.Forms.TextBox tbClientID;
-        private System.Windows.Forms.TextBox tbClientName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnDone;
-        private System.Windows.Forms.Button btnCompleteAuth;
-        private System.Windows.Forms.RichTextBox rtResponse;
-        private System.Windows.Forms.Button btnPost;
-        private FeaturedPostsPage featuredPostsPage1;
-        private System.Windows.Forms.TabPage tpFlickrOAuth;
-        private OAuthHandlers.FlickrOauth2 flickrOauth21;
+        private System.Windows.Forms.Label lblTitle;
+        protected System.Windows.Forms.Button btnPost;
+        protected System.Windows.Forms.RichTextBox rtResponse;
+        protected System.Windows.Forms.Button btnCompleteAuth;
+        protected System.Windows.Forms.Button btnDone;
+        protected System.Windows.Forms.WebBrowser browser1;
+        protected System.Windows.Forms.Button btnAuthorize;
+        protected System.Windows.Forms.TextBox tbCode;
+        protected System.Windows.Forms.TextBox tbRedirectUri;
+        protected System.Windows.Forms.TextBox tbClientSecret;
+        protected System.Windows.Forms.TextBox tbClientID;
+        protected System.Windows.Forms.TextBox tbClientName;
     }
 }
-
